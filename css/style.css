@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+header {
+    width: 1024px;
+    height: 65px;
+    /* background-color: lightblue; */
+
+    margin: auto;
+    border: 1px solid black;
+    border-bottom: 0;
+    padding: 3px;
+}
+
+.container {
+    width: 1024px;
+    height: calc(768px - 65px - 20px);
+    /* background-color: lightcoral; */
+
+    display: flex;
+    margin: auto;
+}
+
+aside {
+    width: 215px;
+    height: calc(768px - 65px - 20px);
+    /* background-color: lightgoldenrodyellow; */
+
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-header {
+    width: 100%;
+    height: calc(100% - 25px);
+    /* background-color: lightgray; */
+    border: 1px solid black;
+    border-right: 0;
+
+    font-family: '標楷體';
+    /* 文字粗細 */
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    color: #FF00FF;
+    padding: 10px;
+}
+
+.aside-title {
+    border-bottom: 1px solid black;
+    padding: 3px;
+}
+
+.menu {
+    /* 四套件,其實題目沒有規定 */
+    display: flex;
+    /* 垂直由上到下排列 */
+    flex-direction: column;
+    /* 所有子元素的間距會平均分佈，在容器內[居中排列] */
+    justify-content: center;
+    /* 子元素在交叉軸上（垂直方向）居中排列，確保它們在容器內垂直對齊 */
+    align-items: center;
+    margin-top: 10px;
+}
+
+.menu-item {
+    width: 200px;
+    height: 35px;
+    background-color: lightblue;
+    margin-top: 5px;
+    background-image: url(./../images/menu1.png);
+    border-radius: 20px;
+    padding-top: 8px;
+    color: #000000;
+    font-size: 16px;
+}
+
+.menu-item:hover {
+    background-image: url(./../images/menu2.png);
+}
+
+.aside-footer {
+    width: 100%;
+    height: 25px;
+    /* background-color: lightgreen; */
+    border: 1px solid black;
+    border-top: 0;
+    border-right: 0;
+
+    font-family: '標楷體';
+    color: #000000;
+    text-align: center;
+    font-size: 16px;
+
+    padding-top: 2px;
+}
+
+main {
+    width: calc(1024px - 215px);
+    height: calc(768px - 65px - 20px);
+    /* background-color: lightsalmon; */
+}
+
+.main-header {
+    width: 100%;
+    height: 29px;
+    /* background-color: lightseagreen; */
+    border: 1px solid black;
+    border-bottom: 0;
+
+    font-size: 24px;
+    font-family: '標楷體';
+    color: #0000FF;
+
+}
+
+.main-footer {
+    width: 100%;
+    height: calc(100% - 29px);
+    /* background-color: lightslategray; */
+    border: 1px solid black;
+}
+
+footer {
+    width: 1024px;
+    flex-basis: 20px;
+    /* background-color: blueviolet; */
+
+    margin: auto;
+    border: 1px solid black;
+    border-top: 0;
+
+    font-family: '標楷體';
+    color: #000000;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* 在main-footer裡面包一個iframe */
+iframe {
+    width: 100%;
+    height: 100%;
+}
