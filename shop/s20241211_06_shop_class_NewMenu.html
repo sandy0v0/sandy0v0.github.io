@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Music Toy Shop</title>
+    <link rel="icon" href="./images/jea01-jarhz-001.ico" type="image/x-icon" />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            text-align: center;
+            padding: 0;
+            /* height: 100%; */
+            background-image: url('./images/bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* 不重複顯示背景圖片 */
+            background-attachment: fixed;
+            /* 固定背景圖不隨捲動 */
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            /* 保證內容居中 */
+            padding-top: 20px;
+        }
+
+        h2 {
+            font-size: 35px;
+            font-weight: bold;
+            margin: 30px;
+            color: burlywood;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            font-size: 18px;
+            width: 60%;
+            table-layout: fixed;
+            /* 強制表格維持固定寬度 */
+            height: 80%;
+            margin: 0 auto;
+            /* background-color: rgba(255, 255, 255, 0.6); */
+        }
+
+        td,
+        th {
+            border-bottom: 1px solid lightgrey;
+            padding: 8px;
+            text-align: center;
+            color: floralwhite;
+            vertical-align: middle;
+            /* 讓內容在格子內垂直置中 */
+
+        }
+
+        tr:nth-child(even) {
+            /* background-color: #dddddd; */
+            background-color: rgb(250, 240, 255, 0.1);
+        }
+
+        tr {
+            height: 55px;
+        }
+
+        .product {
+            color: lightgray;
+            font-size: 15px;
+        }
+
+        .specialDiscount {
+            color: lightcoral;
+        }
+
+        .text-red {
+            color: red;
+            font-size: 30px;
+        }
+
+        img {
+            width: 65%;
+            height: 65%;
+            object-fit: contain;
+            border-radius: 10%;
+        }
+
+        .left-image img {
+            width: 200px;
+            height: 200px;
+            position: fixed;
+            bottom: -10px;
+            left: 10px;
+        }
+
+        input {
+            font-size: 18px;
+            width: 50%;
+            padding: 5px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        #sumResult {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>⋆ * ☪ ⋆ *̣̥ ☆ ·͙̥ ‧ ❄ ‧̩̥ ⛄ Christmas Music Toy Shop 🎄 ‧̩̥ ❅ · ✩ ·͙̥ ⋆ ☪ *̣̥ ⋆</h2>
+
+    <table>
+        <tr>
+            <!-- <th>id</th> -->
+            <th width="20%">產品示意圖</th>
+            <th width="30%">產品介紹</th>
+            <th width="15%">價格</th>
+            <th width="15%">數量</th>
+            <th width="15%">小計</th>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="./images/1.png" alt="" srcset="">
+            </td>
+            <td>
+                <p>
+                    <b>⭐ 聖誕柴犬 - 聖誕特別款 ⭐</b>
+                </p>
+                <br>
+                <p class="product">
+                    柴犬布偶 / 娃娃公仔 / 毛絨玩偶 / 聖誕禮物
+                </p>
+            </td>
+            <td>
+                <p class="priceClass" id="price1" data-price="200">
+                    NT $ 200元 / 個
+                </p>
+            </td>
+            <td>
+                <input class="inputClass" type="number" name="" id="input1" value="0" max="30" min="0">
+            </td>
+            <td>
+                <p class="totalClass" id="total1">
+                    0
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="./images/2.png" alt="" srcset="">
+            </td>
+            <td>
+                <p>
+                    <b>⭐聖誕老公公 / 雪人 / 麋鹿 - 聖誕基本款⭐</b>
+                </p>
+                <br>
+                <p class="product">
+                    聖誕節玩偶組 (聖誕老公公 / 雪人 / 麋鹿)
+                </p>
+            </td>
+            <td>
+                <p class="priceClass" id="price2" data-price="600">
+                    NT $ 600元 / 組
+                </p>
+            </td>
+            <td>
+                <input class="inputClass" type="number" name="" id="input2" value="0" max="30" min="0">
+            </td>
+            <td>
+                <p class="totalClass" id="total2">
+                    0
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="./images/3.png" alt="" srcset="">
+            </td>
+            <td>
+                <p>
+                    <b>⭐ 吉伊卡哇 - 聖誕系列 ⭐</b>
+                </p>
+                <br>
+                <p class="product">
+                    日本 Chiikawa 吉伊卡哇 聖誕節禮品
+                </p>
+            </td>
+            <td>
+                <p class="priceClass" id="price3" data-price="1000">
+                    NT $ 1000元 / 組
+                </p>
+            </td>
+            <td>
+                <input class="inputClass" type="number" name="" id="input3" value="0" max="10" min="0">
+            </td>
+            <td>
+                <p class="totalClass" id="total3">
+                    0
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="./images/4.png" alt="" srcset="">
+            </td>
+            <td>
+                <p>
+                    <b>⭐ 角落小夥伴 - 聖誕系列 ⭐</b>
+                </p>
+                <br>
+                <p class="product">
+                    角落小夥伴 聖誕節絨毛玩偶 / 聖誕禮物
+                </p>
+            </td>
+            <td>
+                <p class="priceClass" id="price3" data-price="1500">
+                    NT $ 1500元 / 組
+                </p>
+            </td>
+            <td>
+                <input class="inputClass" type="number" name="" id="input3" value="0" max="10" min="0">
+            </td>
+            <td>
+                <p class="totalClass" id="total3">
+                    0
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="3" class="specialDiscount">
+                <b>🔔 歡慶佳節限時折扣： 🦌 滿 800 元 打 8 折 🛷 滿千送神祕小禮 ~【 數量有限，送完為止 】</b>
+            </td>
+            <td>
+                <b>🎅 總計金額 </b>
+            </td>
+            <!-- 
+            <td>
+            </td> -->
+            <td>
+                <p id="sumResult">
+                    🎁 0 元
+                </p>
+
+            </td>
+        </tr>
+
+    </table>
+
+    <div class="left-image">
+        <img src="./images/left-image.png" alt="左圖" />
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function () {
+            // function
+            // get all Result => sum
+            function getSum() {
+
+                let sum = 0;
+                totalClass.each(function (index, element) {
+                    console.log('index', index);
+                    console.log('element', element);
+                    console.log('this', this);
+
+                    let getTotalValue = Number($(this).text());
+                    sum = sum + getTotalValue;
+
+                });
+
+                // 重構
+                if (sum >= 800) {
+                    sum = sum * 0.8;
+                    sumResult.attr('class', 'text-red');
+                } else {
+                    sumResult.attr('class', '');
+                    // sumResult.removeClass('text-red');
+                }
+
+                let resultString = `🎁 NT $ ${sum} 元`;
+                sumResult.text(resultString);
+
+            }
+
+            // 1.bind
+            const price1 = $('#price1');
+            const input1 = $('#input1');
+            const total1 = $('#total1');
+
+            const priceClass = $('.priceClass');
+            const inputClass = $('.inputClass');
+            const totalClass = $('.totalClass');
+
+            console.log('priceClass', priceClass);
+            console.log('inputClass', inputClass);
+            console.log('totalClass', totalClass);
+
+
+
+            const sumResult = $('#sumResult');
+            let sum = 0;
+
+
+            // 2.action
+            $.each(inputClass, function (indexInArray, valueOfElement) {
+                $(this).change(function (e) {
+                    console.log('chaneg ok');
+
+                    // now ?
+                    console.log('now $(this)', $(this));
+
+                    // parent() tr
+                    myParent = $(this).parent().parent();
+                    console.log('myParent', myParent);
+
+                    // find() .class
+                    myPrice = myParent.find('.priceClass').attr('data-price');
+                    console.log('myPrice', myPrice);
+
+                    myTotal = myParent.find('.totalClass');
+
+
+                    let getPriceValue = Number(myPrice);
+                    let getInputValue = Number($(this).val());
+                    let result = getPriceValue * getInputValue;
+                    console.log(getPriceValue);
+                    console.log(getInputValue);
+                    console.log(result);
+                    myTotal.text(result);
+
+                    getSum();
+                });
+
+
+            });
+        });
+    </script>
+</body>
+
+</html>
