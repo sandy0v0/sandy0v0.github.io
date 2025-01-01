@@ -205,7 +205,21 @@
 
         .social-icons a:hover {
             color: #007bff;
-            /* Hover 顏色 */
+        }
+
+        /* 設置基本樣式 */
+        .nav-link {
+            color: floralwhite;
+            /* 默認顏色 */
+            transition: color 0.3s, transform 0.3s ease;
+            /* 添加過渡效果 */
+        }
+
+        /* 懸停效果 */
+        .nav-item:hover {
+            cursor: pointer;
+            transform: scale(1.025);
+            /* 懸停時放大 */
         }
 
         /* 為圓形外圍的容器加上陰影 */
@@ -863,7 +877,7 @@
                 <!-- 左側欄位 - 產品介紹表格 -->
                 <div class="col-md-4">
                     <br><br><br><br><br>
-                    <h2 class="featurette-heading fw-normal lh-1">🛍️ 泰山店
+                    <h2 class="featurette-heading fw-normal lh-1" style="color: lightcoral;">🛍️ 泰山店
                         <span class="text-body-secondary">本鋪
                         </span>
                     </h2>
@@ -943,7 +957,7 @@
                 <div class="col-md-5 offset-md-1 mb-3">
                     <form>
                         <h5>訂閱我們的電子報</h5>
-                        <p>每月摘要我們的新鮮事和第一手商品優惠特別訊息</p>
+                        <p>每月摘要我們的新鮮事和第一手商品優惠訊息</p>
                         <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                             <label for="newsletter1" class="visually-hidden">電子郵件</label>
                             <input id="newsletter1" type="text" class="form-control" placeholder="電子郵件">
@@ -955,7 +969,7 @@
 
             <div
                 class="container d-flex flex-column flex-sm-row justify-content-between py-1 my-4 align-items-center border-top">
-                <p>&copy; 2024–2025 Company, Inc. 保留所有權利
+                <p class="mt-4">&copy; 2024–2025 Company, Inc. 保留所有權利
                     &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
                 </p>
 
