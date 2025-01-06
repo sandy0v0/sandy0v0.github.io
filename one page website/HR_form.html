@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Christmas Music Toy Shop HR form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: rgb(240, 240, 250);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container mt-3" style="width: 60%;">
+        <h2 style="text-align: center; font-size: 30px; font-weight: bold;">基本資料表</h2>
+
+        <!-- 應徵職缺 -->
+        <div class="row mt-3">
+            <div class="col-md-3">
+                <label for="jobApplied">應徵職缺：</label>
+                <input type="text" class="form-control" id="jobApplied" placeholder="請輸入應徵職缺">
+            </div>
+
+            <div class="col-md-3">
+                <label for="jobType">希望工作性質：</label>
+                <select class="form-select" id="jobType">
+                    <option value="fullTime">全職</option>
+                    <option value="dispatch">派遣</option>
+                    <option value="partTime">工讀</option>
+                </select>
+            </div>
+
+
+            <div class="col-md-6">
+                <label for="workShift">希望工作時段 (可複選)：</label>
+                <div class="d-flex flex-wrap">
+                    <div class="form-check me-3">
+                        <input class="form-check-input" type="checkbox" id="shift1" value="不拘">
+                        <label class="form-check-label" for="shift1">不拘</label>
+                    </div>
+                    <div class="form-check me-3">
+                        <input class="form-check-input" type="checkbox" id="shift2" value="日班">
+                        <label class="form-check-label" for="shift2">日班</label>
+                    </div>
+                    <div class="form-check me-3">
+                        <input class="form-check-input" type="checkbox" id="shift3" value="晚班">
+                        <label class="form-check-label" for="shift3">午班</label>
+                    </div>
+                    <div class="form-check me-3">
+                        <input class="form-check-input" type="checkbox" id="shift3" value="晚班">
+                        <label class="form-check-label" for="shift3">晚班</label>
+                    </div>
+                    <div class="form-check me-3">
+                        <input class="form-check-input" type="checkbox" id="shift4" value="假日班">
+                        <label class="form-check-label" for="shift4">假日班</label>
+                    </div>
+                    <div class="form-check me-3">
+                        <input class="form-check-input" type="checkbox" id="shift5" value="其他">
+                        <label class="form-check-label" for="shift5">其他</label>
+                        <input type="text" style="width: 80px;" class="form-control;width:5px; me-1" placeholder=" 請說明">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <form action="/action_page.php">
+            <div class="row md-2 mt-3">
+                <div class="col">
+                    <label for="name">姓名：</label>
+                    <input type="text" class="form-control" id="name" placeholder="請輸入姓名">
+                </div>
+                <div class="col">
+                    <div class="col">
+                        <label for="idNumber">身份證字號：</label>
+                        <input type="text" class="form-control" id="idNumber" placeholder="請輸入身份證字號">
+                    </div>
+                </div>
+                <div class="col">
+                    <label for="gender">性別：</label>
+                    <div class="d-flex flex-row mt-1">
+                        <div class="form-check me-3">
+                            <input type="radio" class="form-check-input" id="radio1" name="gender" value="男" checked>
+                            <label class="form-check-label" for="radio1">男</label>
+                        </div>
+                        <div class="form-check me-3">
+                            <input type="radio" class="form-check-input" id="radio2" name="gender" value="女">
+                            <label class="form-check-label" for="radio2">女</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio2" name="gender" value="女">
+                            <label class="form-check-label" for="radio2">其他</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 圖片上傳區塊 -->
+                <div class="photo-upload col">
+                    <label for="profilePhoto">上傳頭像：</label>
+                    <input type="file" class="form-control" id="profilePhoto" name="profilePhoto" accept="image/*">
+                </div>
+
+            </div>
+
+            <div class="row md-2 mt-3">
+                <div class="col">
+                    <label for="birthday">生日：</label>
+                    <input type="date" class="form-control" id="birthday" name="birthday" value="YYYY-MM-DD">
+                </div>
+                <div class="col">
+                    <label for="bloodType">血型：</label>
+                    <select id="bloodType" class="form-control" name="bloodType">
+                        <option value="">請選擇</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="AB">AB</option>
+                        <option value="O">O</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="height">身高：</label>
+                    <input type="number" class="form-control" id="height" name="height" step="0.01" required>
+                </div>
+                <div class="col">
+                    <label for="weight">體重：</label>
+                    <input type="number" class="form-control" id="weight" name="weight" step="0.01" required>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-3">
+                    <label for="mobile">手機：</label>
+                    <input type="text" class="form-control" id="mobile" name="mobile" placeholder="09XX-XXX-XXX">
+                </div>
+                <div class="col-md-3">
+                    <label for="landline">家電：</label>
+                    <input type="text" class="form-control" id="landline" name="landline">
+                </div>
+                <div class="col-md-3">
+                    <label for="email">電子信箱：</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Your Email" name="email">
+                        <!-- <span class="input-group-text">@gmail.com</span> -->
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="maritalStatus">婚姻狀況：</label>
+                    <select id="maritalStatus" class="form-control" name="maritalStatus">
+                        <option value="">請選擇</option>
+                        <option value="已婚">已婚</option>
+                        <option value="未婚">未婚</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <div class="col">
+                        <label for="permanentAddress">戶籍地址：</label>
+                        <input type="text" class="form-control" id="permanentAddress" name="permanentAddress"
+                            placeholder="請輸入地址">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="col">
+                        <label for="mailingAddress">通訊地址：</label>
+                        <input type="text" class="form-control" id="mailingAddress" name="mailingAddress"
+                            placeholder="請輸入地址">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <label for="schoolName">學校名稱：</label>
+                    <input type="text" class="form-control" id="schoolName" name="schoolName" placeholder="請輸入學校名稱">
+                </div>
+                <div class="col-md-5">
+                    <label for="department">科/系/所名稱：</label>
+                    <input type="text" class="form-control" id="department" name="department" placeholder="請輸入科系名稱">
+                </div>
+                <div class="col-md-3">
+                    <label for="academicSystem">學制：</label>
+                    <select id="academicSystem" class="form-control" name="academicSystem">
+                        <option value="">請選擇</option>
+                        <option value="日間部">日間部</option>
+                        <option value="夜間部">夜間部</option>
+                        <option value="在職專班">在職專班</option>
+                        <option value="其他">其他</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row md-2 mt-3">
+                <div class="col-md-3">
+                    <label for="enrollmentDate">入學年月：</label>
+                    <input type="month" class="form-control" id="enrollmentDate" name="enrollmentDate">
+                </div>
+                <div class="col-md-3">
+                    <label for="graduationDate">離校年月：</label>
+                    <input type="month" class="form-control" id="graduationDate" name="graduationDate">
+                </div>
+                <div class="col-md-3">
+                    <label for="degree">學位名稱：</label>
+                    <select id="degree" class="form-control" name="degree" placeholder="請選擇">
+                        <option value="">請選擇</option>
+                        <option value="國小">國小</option>
+                        <option value="國中">國中</option>
+                        <option value="高中(職)">高中(職)</option>
+                        <option value="專科">二專</option>
+                        <option value="專科">五專</option>
+                        <option value="學士">學士</option>
+                        <option value="碩士">碩士</option>
+                        <option value="博士">博士</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="graduated">學業狀況：</label>
+                    <select id="graduated" class="form-control" name="graduated">
+                        <option value="">請選擇</option>
+                        <option value="畢業">畢業</option>
+                        <option value="肄業">肄業</option>
+                        <option value="在學中">在學中</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mt-3 d-flex">
+                <div class="col-md-3">
+                    <label for="skillsCertifications">專業技能或證照：</label>
+                    <input type="text" class="form-control" id="skill1" placeholder="請填寫專業或證照 1">
+                </div>
+                <div class="col-md-3 mt-4">
+                    <input type="text" class="form-control" id="skill2" placeholder="請填寫專業或證照 2">
+                </div>
+                <div class="col-md-3 mt-4">
+                    <input type="text" class="form-control" id="skill3" placeholder="請填寫專業或證照 3">
+                </div>
+                <div class="col-md-3 mt-4">
+                    <input type="text" class="form-control" id="skill4" placeholder="請填寫專業或證照 4">
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row mt-3">
+                <div class="col-md-3">
+                    <label for="jobTitle">服務單位 (一)：</label>
+                    <input type="text" class="form-control" id="jobTitle" placeholder="請輸入工作名稱">
+                </div>
+                <div class="col-md-3">
+                    <label for="position">職稱：</label>
+                    <input type="text" class="form-control" id="position" placeholder="請輸入職稱">
+                </div>
+                <div class="col-md-3">
+                    <label for="workPeriod">工作期間：</label>
+                    <input type="text" class="form-control" id="workPeriod" placeholder="X年X月－X年X月">
+                </div>
+                <div class="col-md-3">
+                    <label for="jobDescription">工作內容：</label>
+                    <textarea class="form-control" id="jobDescription" placeholder="請輸入工作內容" rows="1"></textarea>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-3">
+                    <label for="jobTitle">服務單位 (二)：</label>
+                    <input type="text" class="form-control" id="jobTitle" placeholder="請輸入工作名稱">
+                </div>
+                <div class="col-md-3">
+                    <label for="position">職稱：</label>
+                    <input type="text" class="form-control" id="position" placeholder="請輸入職稱">
+                </div>
+                <div class="col-md-3">
+                    <label for="workPeriod">工作期間：</label>
+                    <input type="text" class="form-control" id="workPeriod" placeholder="X年X月－X年X月">
+                </div>
+                <div class="col-md-3">
+                    <label for="jobDescription">工作內容：</label>
+                    <textarea class="form-control" id="jobDescription" placeholder="請輸入工作內容" rows="1"></textarea>
+                </div>
+            </div>
+            <hr>
+
+            <div class="row md-2 mt-3">
+                <label for="noLicenseDetails">駕駛執照 (可複選)：</label>
+                <div class="col-md-1">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="noLicense" name="license" value="無駕照"
+                            onclick="toggleDropdown('noLicenseDropdown', this)">
+                        <label class="form-check-label" for="noLicense">
+                            無
+                        </label>
+                    </div>
+                    <!-- <div id="noLicenseDropdown" class="form-group" style="display:none;">
+                        <label for="noLicenseDetails">詳細說明：</label>
+                        <select class="form-control" id="noLicenseDetails">
+                            <option value="選項1">選項1</option>
+                            <option value="選項2">選項2</option>
+                        </select>
+                    </div> -->
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="motorcycle" name="license" value="機車(輕型/重型)"
+                            onclick="toggleDropdown('motorcycleDropdown', this)">
+                        <label class="form-check-label" for="motorcycle">
+                            機車
+                        </label>
+                    </div>
+                    <div id="motorcycleDropdown" class="form-group" style="display:none;">
+                        <select class="form-control" id="motorcycleDetails">
+                            <option value="">請選擇</option>
+                            <option value="選項1">輕型機車</option>
+                            <option value="選項2">重型機車</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="normalCar" name="license" value="普通客車(小/大)"
+                            onclick="toggleDropdown('normalCarDropdown', this)">
+                        <label class="form-check-label" for="normalCar">
+                            普通客車
+                        </label>
+                    </div>
+                    <div id="normalCarDropdown" class="form-group" style="display:none;">
+                        <select class="form-control" id="normalCarDetails">
+                            <option value="">請選擇</option>
+                            <option value="小型">小型普通客車</option>
+                            <option value="大型">大型普通客車</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="commercialCar" name="license"
+                            value="職業客車(小/大/聯結車)" onclick="toggleDropdown('commercialCarDropdown', this)">
+                        <label class="form-check-label" for="commercialCar">
+                            職業客車
+                        </label>
+                    </div>
+                    <div id="commercialCarDropdown" class="form-group" style="display:none;">
+                        <select class="form-control" id="commercialCarDetails">
+                            <option value="">請選擇</option>
+                            <option value="選項1">小型職業客車</option>
+                            <option value="選項2">大型職業客車</option>
+                            <option value="選項3">聯結車</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="selfVehicle" name="license"
+                            value="自備汽機車(汽車/機車)" onclick="toggleDropdown('selfVehicleDropdown', this)">
+                        <label class="form-check-label" for="selfVehicle">
+                            自備汽機車
+                        </label>
+                    </div>
+                    <div id="selfVehicleDropdown" class="form-group" style="display:none;">
+                        <select class="form-control" id="selfVehicleDetails">
+                            <option value="">請選擇</option>
+                            <option value="選項1">汽車</option>
+                            <option value="選項2">機車</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <div class="row mt-3">
+                <div class="col">
+                    <label for="languageSkills">語言能力 (可複選)：</label>
+                    <div class="d-flex flex-wrap">
+                        <div class="form-check me-3">
+                            <input class="form-check-input" type="checkbox" id="chinese" name="language" value="國語"
+                                onclick="toggleLanguageLevel('chinese')">
+                            <label class="form-check-label" for="chinese">國語</label>
+                            <div id="chineseLevel" class="language-level" style="display:none;">
+                                <select class="form-select">
+                                    <option value="精通">精通</option>
+                                    <option value="良好">良好</option>
+                                    <option value="普通">普通</option>
+                                    <option value="略懂">略懂</option>
+                                    <option value="不懂">不懂</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-check me-3">
+                            <input class="form-check-input" type="checkbox" id="taiwanese" name="language" value="台語"
+                                onclick="toggleLanguageLevel('taiwanese')">
+                            <label class="form-check-label" for="taiwanese">台語</label>
+                            <div id="taiwaneseLevel" class="language-level" style="display:none;">
+                                <select class="form-select">
+                                    <option value="精通">精通</option>
+                                    <option value="良好">良好</option>
+                                    <option value="普通">普通</option>
+                                    <option value="略懂">略懂</option>
+                                    <option value="不懂">不懂</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-check me-3">
+                            <input class="form-check-input" type="checkbox" id="english" name="language" value="英語"
+                                onclick="toggleLanguageLevel('english')">
+                            <label class="form-check-label" for="english">英語</label>
+                            <div id="englishLevel" class="language-level" style="display:none;">
+                                <select class="form-select">
+                                    <option value="精通">精通</option>
+                                    <option value="良好">良好</option>
+                                    <option value="普通">普通</option>
+                                    <option value="略懂">略懂</option>
+                                    <option value="不懂">不懂</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-check me-3">
+                            <input class="form-check-input" type="checkbox" id="japanese" name="language" value="日語"
+                                onclick="toggleLanguageLevel('japanese')">
+                            <label class="form-check-label" for="japanese">日語</label>
+                            <div id="japaneseLevel" class="language-level" style="display:none;">
+                                <select class="form-select">
+                                    <option value="精通">精通</option>
+                                    <option value="良好">良好</option>
+                                    <option value="普通">普通</option>
+                                    <option value="略懂">略懂</option>
+                                    <option value="不懂">不懂</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-check me-3">
+                            <input class="form-check-input" type="checkbox" id="korean" name="language" value="韓語"
+                                onclick="toggleLanguageLevel('korean')">
+                            <label class="form-check-label" for="korean">韓語</label>
+                            <div id="koreanLevel" class="language-level" style="display:none;">
+                                <select class="form-select">
+                                    <option value="精通">精通</option>
+                                    <option value="良好">良好</option>
+                                    <option value="普通">普通</option>
+                                    <option value="略懂">略懂</option>
+                                    <option value="不懂">不懂</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-check me-3">
+                            <input class="form-check-input" type="checkbox" id="otherLanguage" name="language"
+                                value="其他" onclick="toggleOtherLanguageInput()">
+                            <label class="form-check-label" for="otherLanguage">其他</label>
+                            <div id="otherLanguageInput" class="language-level" style="display:none;">
+                                <input type="text" class="form-control" id="otherLanguageText" placeholder="請輸入其他語言">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                // Function to toggle the language level dropdown visibility based on checkbox selection
+                function toggleLanguageLevel(languageId) {
+                    var checkbox = document.getElementById(languageId);
+                    var levelDiv = document.getElementById(languageId + "Level");
+
+                    if (checkbox.checked) {
+                        levelDiv.style.display = "block"; // Show the language level dropdown
+                    } else {
+                        levelDiv.style.display = "none"; // Hide the language level dropdown
+                    }
+                }
+
+                // Function to toggle the 'other language' input field visibility
+                function toggleOtherLanguageInput() {
+                    var otherCheckbox = document.getElementById("otherLanguage");
+                    var otherInput = document.getElementById("otherLanguageInput");
+
+                    if (otherCheckbox.checked) {
+                        otherInput.style.display = "block"; // Show the 'other language' text input
+                    } else {
+                        otherInput.style.display = "none"; // Hide the 'other language' text input
+                    }
+                }
+            </script>
+
+            <hr>
+
+            <div class="row mt-3">
+                <div class="col-12">
+                    <label for="source">(๑•̀ㅁ•́๑)✧ 請問您自哪些管道獲知此職缺？</label>
+                </div>
+
+                <div class="col-12 d-flex flex-wrap">
+                    <div class="form-check me-3">
+                        <input class="form-check-input" type="checkbox" id="source1" name="source" value="徵才活動">
+                        <label class="form-check-label" for="source1">徵才活動</label>
+                    </div>
+
+                    <div class="form-check me-3">
+                        <input class="form-check-input" type="checkbox" id="source2" name="source" value="人力銀行">
+                        <label class="form-check-label" for="source2">人力銀行</label>
+                    </div>
+
+                    <div class="form-check me-3">
+                        <input class="form-check-input" type="checkbox" id="source3" name="source" value="顧問公司">
+                        <label class="form-check-label" for="source3">顧問公司</label>
+                    </div>
+
+                    <div class="form-check me-3">
+                        <input class="form-check-input" type="checkbox" id="source4" name="source" value="朋友/親戚介紹">
+                        <label class="form-check-label" for="source4">朋友/親戚介紹</label>
+                    </div>
+
+                    <div class="form-check me-3">
+                        <input class="form-check-input" type="checkbox" id="source5" name="source" value="學校/老師">
+                        <label class="form-check-label" for="source5">學校老師</label>
+                    </div>
+
+                    <div class="form-check me-3">
+                        <input class="form-check-input" type="checkbox" id="source6" name="source" value="其他"
+                            onclick="toggleOtherInput()">
+                        <label class="form-check-label" for="source6">其他</label>
+                    </div>
+                </div>
+
+                <!-- 這是隱藏的文本框，當 "其他" 被選擇時會顯示出來 -->
+                <div id="otherInputContainer" class="mt-1" style="display: none;">
+                    <label for="otherSource"></label>
+                    <input type="text" class="form-control" id="otherSource" name="otherSource" placeholder="請輸入其他來源">
+                </div>
+            </div>
+
+
+
+
+            <div class="row mt-3">
+                <div class="col">
+                    <label for="selfIntroduction">自我介紹：</label>
+                    <textarea class="form-control" id="selfIntroduction" name="selfIntroduction" rows="5"
+                        placeholder="請輸入自我介紹"></textarea>
+                </div>
+            </div>
+
+
+
+            <button type="submit" class="btn btn-primary mt-3">提交</button>
+        </form>
+    </div>
+    <br>
+
+
+
+
+    <script>
+        // 控制顯示或隱藏下拉選單
+        function toggleDropdown(dropdownId, checkbox) {
+            var dropdown = document.getElementById(dropdownId);
+
+            // 根據checkbox是否勾選來顯示或隱藏下拉選單
+            if (checkbox.checked) {
+                dropdown.style.display = "block"; // 顯示下拉選單
+            } else {
+                dropdown.style.display = "none"; // 隱藏下拉選單
+            }
+        }
+
+
+    </script>
+
+
+    <script>
+        // 監控"其他" checkbox的勾選狀態
+        function toggleOtherInput() {
+            var checkbox = document.getElementById("source6");
+            var otherInputContainer = document.getElementById("otherInputContainer");
+
+            // 如果勾選 "其他" 則顯示輸入框，否則隱藏
+            if (checkbox.checked) {
+                otherInputContainer.style.display = "block";
+            } else {
+                otherInputContainer.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

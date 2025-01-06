@@ -32,7 +32,6 @@
         /* 設置輪播圖容器的最大寬度並使其居中 */
         .carousel {
             max-width: 1920px;
-            /* 設置最大寬度為 1920px */
             margin: 0 auto;
             /* 使容器居中 */
             overflow: hidden;
@@ -43,9 +42,7 @@
         .carousel-inner img {
             width: 100%;
             max-width: 1920px;
-            /* 最大寬度1920px */
             max-height: 1000px;
-            /* 最大高度1000px */
             object-fit: cover;
             /* 保持圖片的比例並覆蓋容器 */
         }
@@ -185,15 +182,12 @@
 
         /* 設定圖片的初始  */
         .img-hover {
-            /* 添加過度效果   */
             transition: filter 0.5s ease, transform 0.5s ease;
         }
 
         /* 設定滑鼠停在上面的效果 */
         .img-hover:hover {
-            /*  改變滑鼠形状   */
             cursor: pointer;
-            /* 放大圖像  */
             transform: scale(1.025);
         }
 
@@ -210,36 +204,14 @@
         /* 設置基本樣式 */
         .nav-link {
             color: floralwhite;
-            /* 默認顏色 */
             transition: color 0.3s, transform 0.3s ease;
-            /* 添加過渡效果 */
         }
 
         /* 懸停效果 */
         .nav-item:hover {
             cursor: pointer;
             transform: scale(1.025);
-            /* 懸停時放大 */
         }
-
-        /* 為圓形外圍的容器加上陰影 */
-        /* .col-lg-2 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            height: 100%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
-        /* 設置陰影效果 */
-        /* padding: 10px; */
-        /* 可以增加間距，防止陰影被圖片擋住
-        
-
-        /* 為圖片本身加上陰影 */
-        /* .bd-placeholder-img image {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
-        /* 圖片的陰影 */
     </style>
 
 </head>
@@ -913,7 +885,9 @@
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">商品及服務</a></li>
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">永續承諾</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">人才招募</a></li>
+                        <li class="nav-item mb-2"><a href="HR_form.html"
+                                class="nav-link p-0 text-body-secondary">人才招募</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -945,9 +919,11 @@
                     <h5>店鋪相關服務</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">店鋪首頁</a></li>
+                        <li class="nav-item mb-2"><a href="#page1" class="nav-link p-0 text-body-secondary">商品分類</a>
+                        </li>
                         <li class="nav-item mb-2"><a href="#page2" class="nav-link p-0 text-body-secondary">新品預告</a>
                         </li>
-                        <li class="nav-item mb-2"><a href="#page3" class="nav-link p-0 text-body-secondary">商品特展</a>
+                        <li class="nav-item mb-2"><a href="#page3" class="nav-link p-0 text-body-secondary">優惠商品</a>
                         </li>
                         <li class="nav-item mb-2"><a href="#page4" class="nav-link p-0 text-body-secondary">店鋪資訊</a>
                         </li>
@@ -969,7 +945,7 @@
 
             <div
                 class="container d-flex flex-column flex-sm-row justify-content-between py-1 my-4 align-items-center border-top">
-                <p class="mt-4">&copy; 2024–2025 Company, Inc. 保留所有權利
+                <p class="mt-4">&copy; 2024–2025 Xmas Music Toy Shop, Inc. 保留所有權利
                     &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
                 </p>
 
